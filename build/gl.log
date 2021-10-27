@@ -1,6 +1,6 @@
-21-10-17 10:37:23 INFO : 	Subsystems initialised
-21-10-17 10:37:24 INFO : 	WindowSdl initialised
-21-10-17 10:37:24 INFO : 	OpenGL Context initialised
-21-10-17 10:37:24 INFO : 	GLEW initialised
-21-10-17 10:37:24 INFO : 	program 3 GL_VALIDATE_STATUS = 1
-21-10-17 10:37:26 INFO : 	Bye :)
+21-10-27 10:21:37 INFO : 	Subsystems initialised
+21-10-27 10:21:37 INFO : 	WindowSdl initialised
+21-10-27 10:21:37 INFO : 	OpenGL Context initialised
+21-10-27 10:21:37 INFO : 	GLEW initialised
+21-10-27 10:21:37 INFO : 	program 3 GL_VALIDATE_STATUS = 1
+21-10-27 10:21:39 INFO : 	Bye :)

@@ -22,11 +22,13 @@ void Game::load() {
 
     projection = Matrix4::createPerspectiveFOV(70.0f, windowWidth, windowHeight, 0.1f, 1000.0f);
 
+//OGL:
     glEnable(GL_CULL_FACE);
     glFrontFace(GL_CW);
 
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
+
 
     shader.compileVertexShader();
     shader.compileFragmentShader();
@@ -34,14 +36,6 @@ void Game::load() {
 
     shader.use();
 
-    map.init();
-
-    // for(int i = 0; i<10; i++){
-    //     Cube cube = Cube(Vector2 { static_cast<float>(i % 10), static_cast<float>(i / 10) }, WHITE);
-    //     cube.init();
-    //     cubes.push_back(cube);
-
-    // }
 }
 
 void Game::handleInputs() {
@@ -72,16 +66,15 @@ void Game::update(float dt) {
 }
 
 void Game::render() {
+
+    //OGL:
     static const GLfloat bgColor[] = {0.0f, 0.0f, 0.2f, 1.0f};
     glClearBufferfv(GL_COLOR, 0, bgColor);
     
     shader.setMatrix4("proj_matrix", projection);
-    
-    map.draw(shader);
+
 }
 
 void Game::clean() {
-    // for(auto& cube:cubes){
-    //     cube.clean();
-    // }
+
 }

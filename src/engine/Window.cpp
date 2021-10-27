@@ -10,6 +10,8 @@ Window::Window(const std::string &title)
     : context(nullptr), title(title), previousSeconds(0), currentSeconds(0), frameCount(0) {}
 
 Window::~Window() {
+
+    //SDL:
     SDL_Quit();
     LOG(Info) << "Bye :)";
 }
@@ -28,21 +30,21 @@ bool Window::init(int xPos, int yPos, int width, int height, bool isFullscreen) 
 
     LOG(Info) << "Subsystems initialised";
 
-    // Sdl window
+    //SDL: window
     window = SDL_CreateWindow(title.c_str(), xPos, yPos, width, height, flags);
     if (window) {
         LOG(Info) << "WindowSdl initialised";
     } else
         return false;
 
-    // OpenGL context
+    //OGL: context
     context = SDL_GL_CreateContext(window);
     if (context) {
         LOG(Info) << "OpenGL Context initialised";
     } else
         return false;
 
-    // OpenGL setup
+    //OGL: setup
     glewExperimental = GL_TRUE;
     GLenum initGLEW(glewInit());
     if (initGLEW == GLEW_OK) {
